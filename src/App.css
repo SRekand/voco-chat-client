@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 72%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
+/* App Wrapper */
+.wrapper {
+  width: 600px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* Chat App */
+.chatApp {
+  overflow-y: auto;
+  position: relative;
+  background-color: #242424;
+  height: 700px;
+  width: 600px;
+  border-radius: 12px;
+
+  padding-bottom: 4rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+/* Message Display on App*/
+.MsgBox {
+  background-color: gray;
   color: white;
+
+  margin: 2rem;
+  padding: .2rem;
+  border-radius: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* MSG Send Button */
+.button {
+  height: 40px;
+  width: 80px;
+  color: white;
+  margin-top: 1rem;
+  float: right;
+  border: 3px solid WHITE;
+  border-radius: 12px;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* Username and Message Group */
+/* Group */
+.messageComp {
+  background-color: white;
+  border-radius: 0px 0px 10px 10px;
+  position: absolute;
+  bottom: 56px;
+}
+/* User */
+.UserName {
+  float:left;
+  width: 30%;
+}
+.UserName input {
+  height: 60px;
+  border-radius: 0px 0px 0px 10px;
+}
+/* Message */
+.message {
+  float:right;
+  width: 70%;
+}
+.message input {
+  height: 60px;
+  width: 413px;
+  margin: 0 auto;
+
+  border-radius: 0px 0px 10px 0px;
 }
