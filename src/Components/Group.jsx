@@ -3,11 +3,11 @@ import Message from "./Message";
 import Button from "./SendButton";
 import UserName from "./UserName";
 
-function Group() {
+function Group({onMessageChange, onAuthorChange}) {
     return (
         <div class="messageComp">
-            <UserName></UserName>
-            <Message></Message>
+            <UserName onAuthorChange={onAuthorChange}></UserName>
+            <Message onMessageChange={onMessageChange}></Message>
         </div>
     );
 }

@@ -1,6 +1,6 @@
-function Button() {
+function SendButton({submit}) {
     return (
-            <button class="button">SEND</button>
+            <button class="button" onClick={submit}>SEND</button>
     );
 }
-export default Button;
+export default SendButton;

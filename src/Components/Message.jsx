@@ -1,8 +1,9 @@
-function Message() {
+function Message({onMessageChange})  {
     return (
-        <div class="message">
-            <input type="text"className="Msg" placeholder="Message"></input>
+        <div className="message">
+            <input type="text"className="Msg" placeholder="Message" onChange={(e) => onMessageChange(e.target.value)}></input>
         </div>
     );
-}
+};
+
 export default Message;

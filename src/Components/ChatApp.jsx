@@ -1,22 +1,11 @@
 import MsgBox from "./MsgBox";
-import UserName from "./UserName";
-import Group from "./Group";
-import SendButton from "./SendButton";
 
-function ChatApp() {
+function ChatApp({messages}) {
     return (
       <div class="chatApp">
-          <MsgBox></MsgBox>
-          <MsgBox></MsgBox>
-          <MsgBox></MsgBox>
-          <MsgBox></MsgBox>
-          <MsgBox></MsgBox>
-          <MsgBox></MsgBox>
-          <MsgBox></MsgBox>
-          <MsgBox></MsgBox>
-          <MsgBox></MsgBox>
-          <MsgBox></MsgBox>
-          <MsgBox></MsgBox>
+          {messages.map((mes)=> {
+              return <MsgBox username={mes.author} message={mes.message}></MsgBox>
+          })}
       </div>
     );
 }

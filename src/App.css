@@ -55,7 +55,9 @@ body {
   padding: .2rem;
   border-radius: 12px;
 }
-
+.author {
+  color: blue;
+}
 
 /* MSG Send Button */
 .button {
