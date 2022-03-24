@@ -10,22 +10,28 @@ function App() {
     const [messages, setMessages] = useState([]);
 
     const submitMessages = () => {
-        const post = {
-            message: message,
-            author: author
-        }
-        setMessages((prevState)=> [...prevState, post])
+            const post = {
+                message: message,
+                author: author,
+            }
+        setMessages((prevState) => [...prevState, post])
+        setMessage('');
     }
+
+
 
     return (
         <body>
         <div class="wrapper">
             <ChatApp messages={messages}></ChatApp>
-            <Group onMessageChange={setMessage} onAuthorChange={setAuthor}></Group>
+            <Group message={message} setMessageDel={setMessage} onMessageChange={setMessage} onAuthorChange={setAuthor}></Group>
             <SendButton submit={submitMessages}></SendButton>
         </div>
         </body>
     );
+
+  //  document.getElementsByClassName('')
+
 }
 
 export default App;

@@ -1,7 +1,8 @@
-function Message({onMessageChange})  {
+function Message({onMessageChange, message})  {
+
     return (
         <div className="message">
-            <input type="text"className="Msg" placeholder="Message" onChange={(e) => onMessageChange(e.target.value)}></input>
+            <input type="text" id="Msg" className="Msg" placeholder="Message" value={message} onChange={(e) => onMessageChange(e.target.value)}></input>
         </div>
     );
 };
